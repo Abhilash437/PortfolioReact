@@ -18,6 +18,10 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   display: none;
 }
 
+body, html{
+  scroll-behavior: smooth
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

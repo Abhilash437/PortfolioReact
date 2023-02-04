@@ -1,31 +1,27 @@
-import Spline from '@splinetool/react-spline';
-import {useState, useEffect} from 'react';
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './components/Home';
+import About from './components/About';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import Navbar from './components/Navbar';
+import { AnimatePresence } from "framer-motion";
 
 function App() {
-  const [isActive, setIsActive] = useState(false);
-
   return (
-    <div className="flex w-screen h-screen min-h-screen flex-col items-center justify-center relative bg-primary pb-20">
-      
-      <nav className="w-full px-6 z-50 fixed inset-x-0 top-2 flex justify-center items-center">
-        <div className='w-full md:w-880 bg-navBar p-4 rounded-2xl flex items-center'>
-          <p className='text-lg text-slate-200 font-medium'>Abhilash</p>
-          <div className='hidden md:flex items-center gap-6 ml-6 flex-1'>
-            <a href="#home" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'>Home</a>
-            <a href="#home" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'>About</a>
-            <a href="#home" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'>Projects</a>
-            <a href="#home" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'>Contact</a>
-            <a href="#home" className='ml-auto text-base text-textBase font-medium hover:text-slate-100 cursor-pointer border border-textBase px-2 py-1 rounded-xl hover:border-gray-100 duration-100 ease-in-out'>Download</a>
-          </div>
-        </div>
-      </nav>
-      
-      <div className="relative w-screen h-screen p-20" id="home">
-      {/* <Spline scene="https://prod.spline.design/KX3tlyDGj0qYHHE5/scene.splinecode"/> */}
-      <Spline scene="https://prod.spline.design/KX3tlyDGj0qYHHE5/scene.splinecode" />
-      </div>
+    <AnimatePresence initial={false}>
+      <div className="flex w-screen min-h-screen flex-col items-center justify-center relative bg-primary pb-20">
+        <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Navbar/>}>
+            <Route index path="/Home" element={<Home/>}/>
+            <Route path="/About" element={<About/>}/>
+            <Route path="/Projects" element={<Projects/>}/>
+            <Route path="/Contact" element={<Contact/>}/>  
+          </Route>      
+        </Routes>
+      </BrowserRouter>
     </div>
+    </AnimatePresence>
   );
 }
 
