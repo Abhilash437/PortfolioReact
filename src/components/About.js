@@ -33,7 +33,7 @@ const About = () => {
                     </img>
                 </div>
             </div>
-            <div className='w-full h-420 flex flex-col items-center justify-center pt-10'>
+            <div className='w-full h-420 flex flex-col items-center justify-center pt-20'>
                 <p className='text-lg text-black text-justify'>Hi, I'm Abhilash, a computer science student at JSS STU Mysore. I'm a full-stack web developer with a passion for coding and digital art. Over the past 1.5 years, I have been dedicated to learning web development and have become proficient in HTML, CSS, JavaScript, NodeJS, Express JS, MongoDB, Mongoose, React JS, and MySQL. My primary focus is on the MERN stack, and I'm constantly striving to improve my skills and stay up-to-date with the latest technologies. In addition to web development, I'm also a data science enthusiast and enjoy exploring ways to analyze and visualize data.</p>
             </div>
         </section>
@@ -60,8 +60,8 @@ const About = () => {
             </VerticalTimeline>
         </section>
         <section className='grid grid-cols-1 md:grid-cols-2 w-full h-full justify-center items-center '>
-            <div className='w-full md:w-sreen h-screen md:h-screen mb-0'>
-                <Spline scene="https://prod.spline.design/f-0r3BJqWXVCPg64/scene.splinecode" />
+            <div className='hidden md:block w-full md:w-sreen h-screen md:h-screen mb-0'>
+                <Spline className="hidden md:block" scene="https://prod.spline.design/f-0r3BJqWXVCPg64/scene.splinecode" />
             </div>
             <div class="rounded shadow-lg h-100 md:h-fit w-100 -mt-0 md:mt-1">
             <div class="px-6 py-4">
