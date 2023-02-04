@@ -5,10 +5,12 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
 import { AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
 
-function App() {
+
+function App(){
   return (
-    <AnimatePresence initial={false}>
+      <AnimatePresence initial={false}>
       <div className="flex w-screen min-h-screen flex-col items-center justify-center relative bg-primary pb-20">
         <BrowserRouter>
         <Routes>

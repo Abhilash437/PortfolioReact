@@ -16,7 +16,7 @@ const Navbar = () => {
                 <img src={logo} className='w-12'></img>
             </p>
             <div className='hidden md:flex items-center gap-6 ml-6 flex-1'>
-                <a href="/Home" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'>Home</a>
+                <a href="/" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'>Home</a>
                 <a href="/About" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'>About</a>
                 <a href="/Projects" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'>Projects</a>
                 <a href="/Contact" className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'>Contact</a>
@@ -28,7 +28,7 @@ const Navbar = () => {
             {isActive &&
                 (
                 <motion.div initial={{opacity:0, scale:0.5}} animate={{opacity:1, scale:1.1}} exit={{opacity:0, scale:0.5}} transition={{delay:'0.1s', type:'spring'}} className='p-4 w-275 bg-navBar rounded-lg fixed top-24 right-16 flex flex-col items-center justify-center gap-6'>
-                    <a href="/Home" onClick = {()=>setIsActive(false)}className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'>Home</a>
+                    <a href="/" onClick = {()=>setIsActive(false)}className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'>Home</a>
                     <a href="/About" onClick = {()=>setIsActive(false)}className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'>About</a>
                     <a href="/Projects" onClick = {()=>setIsActive(false)}className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'>Projects</a>
                     <a href="/Contact" onClick = {()=>setIsActive(false)}className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'>Contact</a>

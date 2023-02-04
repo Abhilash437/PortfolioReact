@@ -3,10 +3,25 @@ import Spline from '@splinetool/react-spline';
 import About from './About';
 import Projects from './Projects';
 import Contact from './Contact';
+import {PacmanLoader} from 'react-spinners';
+import {useState, useEffect} from 'react';
 
 const Home = () => {
+  const [loading, setLoading] = useState(false);
+ useEffect(()=>{
+  setLoading(true);
+  setTimeout(()=>{
+    setLoading(false);
+  },5000);
+ },[])
   return (
       <>
+      {
+        loading ? 
+        <PacmanLoader color="#FF597B" />
+
+        :
+        <>
         <div className="relative w-screen h-screen md:mt-16" id="home">
             {/* <Spline scene="https://prod.spline.design/KX3tlyDGj0qYHHE5/scene.splinecode"/> */}
             <Spline scene="https://prod.spline.design/KX3tlyDGj0qYHHE5/scene.splinecode" />
@@ -20,6 +35,10 @@ const Home = () => {
         <About/>
         <Projects/>
         <Contact/>
+        </>
+
+      }
+        
       </>
   )
 }

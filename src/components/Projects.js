@@ -47,7 +47,7 @@ const data = [
 
 const Projects = () => {
   return (
-    <section className='flex flex-wrap items-center justify-evenly my-20 p-2 gap-4' id="projects">
+    <section className='flex flex-wrap items-center justify-evenly my-20 p-2 pt-10 gap-4' id="projects">
         {data.map((project)=>(
         <div className='border border-zinc-800 rounded-md p-2 mb-10 min-w-[275px] md:max-w-[275px] hover:border-zinc-600 duration-100 ease-in-out'>
             <p className='text-md text-Black font-medium'>{project.title.length > 25 ? `${project.title.slice(0, 25)}...` : project.title}</p>
